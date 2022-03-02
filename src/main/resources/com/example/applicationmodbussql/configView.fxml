@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="200.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.applicationmodbussql.Controllers.ConfigController">
+   <children>
+      <TabPane fx:id="tabPaneApp" onMouseDragged="#onTabPaneDragDetected" onMousePressed="#onTabPanePressed" prefHeight="370.0" prefWidth="200.0" stylesheets="@../../../StyleSheets/StyleSheet.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="SERVER">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212121" height="262.0" layoutX="6.0" layoutY="5.0" stroke="#212121" strokeType="INSIDE" width="188.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212121" height="42.0" layoutX="6.0" layoutY="271.0" stroke="BLACK" strokeType="INSIDE" width="188.0" />
+                        <Button fx:id="closeButtonServer" layoutX="25.0" layoutY="278.0" mnemonicParsing="false" onAction="#onCloseButtonServerClick" prefHeight="27.0" prefWidth="63.0" styleClass="defaultButton" stylesheets="@../../../StyleSheets/StyleSheet.css" text="CLOSE" />
+                        <TextField fx:id="textFieldDateBaseName" layoutX="26.0" layoutY="128.0" text="Date base name" />
+                        <TextField fx:id="textFieldSQLServer" layoutX="26.0" layoutY="77.0" text="Server URL" />
+                        <Text fill="#bdbdbd" layoutX="56.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date base name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="70.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server URL">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="79.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="textFieldUsername" layoutX="25.0" layoutY="177.0" text="Username" />
+                        <Text fill="#bdbdbd" layoutX="72.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="textFieldPassword" layoutX="26.0" layoutY="229.0" text="Password" />
+                        <Text fill="#bdbdbd" layoutX="73.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="saveButtonServer" layoutX="117.0" layoutY="278.0" mnemonicParsing="false" onAction="#onSaveButtonServerClick" prefHeight="23.0" prefWidth="63.0" styleClass="defaultButton" stylesheets="@../../../StyleSheets/StyleSheet.css" text="SAVE" />
+                        <Text fill="#bdbdbd" layoutX="13.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONNECTIONS INFOMRATION" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="MODBUS">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="347.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212121" height="42.0" layoutX="6.0" layoutY="271.0" stroke="BLACK" strokeType="INSIDE" width="188.0" />
+                        <Button fx:id="closeButtonModbus" layoutX="25.0" layoutY="278.0" mnemonicParsing="false" onAction="#onCloseButtonModbusClick" prefHeight="27.0" prefWidth="63.0" styleClass="defaultButton" stylesheets="@../../../StyleSheets/StyleSheet.css" text="CLOSE" />
+                        <Button fx:id="saveButtonServer1" layoutX="117.0" layoutY="278.0" mnemonicParsing="false" onAction="#onSaveButtonModbusClick" prefHeight="27.0" prefWidth="63.0" styleClass="defaultButton" stylesheets="@../../../StyleSheets/StyleSheet.css" text="SAVE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212121" height="262.0" layoutX="6.0" layoutY="5.0" stroke="#212121" strokeType="INSIDE" width="188.0" />
+                        <TextField fx:id="textFieldModbusPort" layoutX="26.0" layoutY="128.0" onMouseClicked="#onTextFieldPLCPortClick" text="Modbus IP" />
+                        <TextField fx:id="textFieldModbusIp" layoutX="26.0" layoutY="77.0" onMouseClicked="#onTextFieldPLCIpClick" text="Modbus IP" />
+                        <Text fill="#bdbdbd" layoutX="62.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modbus Port">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="70.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modbus IP">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="79.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="13.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONNECTIONS INFOMRATION" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="textFieldDataLength" layoutX="25.0" layoutY="177.0" onMouseClicked="#onTextFieldDataLengthClick" text="Data length" />
+                        <Text fill="#bdbdbd" layoutX="66.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data length">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="textFieldStartAddress" layoutX="26.0" layoutY="229.0" onMouseClicked="#onTextFieldStartAddressClick" text="Start address" />
+                        <Text fill="#bdbdbd" layoutX="62.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start address">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textInvalidModbusIP" fill="RED" layoutX="56.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVALID" visible="false">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textInvalidModbusPort" fill="RED" layoutX="55.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVALID" visible="false">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textInvalidModbusDataLength" fill="RED" layoutX="56.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVALID" visible="false">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textInvalidModbusStartAddress" fill="RED" layoutX="54.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVALID" visible="false">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Text>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

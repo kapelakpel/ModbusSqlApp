@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPaneApp" maxHeight="350" maxWidth="600" minHeight="350" minWidth="600" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.applicationmodbussql.Controllers.ModbusSQLController">
+   <top>
+      <AnchorPane onMouseDragged="#onBorderPaneDragDetected" onMousePressed="#onBorderPanePressed" prefHeight="128.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212121" height="32.0" stroke="#212121" strokeType="INSIDE" width="600.0" />
+            <Button id="exitButton" fx:id="buttonExit" contentDisplay="CENTER" ellipsisString="" layoutX="559.0" layoutY="3.0" mnemonicParsing="false" onAction="#onButtonExitClick" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../../StyleSheets/StyleSheet.css" />
+            <Button id="minimizeButton" fx:id="buttonMinimize" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" layoutX="511.0" layoutY="3.0" mnemonicParsing="false" onAction="#onButtonMinimizeClick" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../../StyleSheets/StyleSheet.css" />
+            <Button id="configButton" fx:id="buttonConfigurationWindow" contentDisplay="CENTER" ellipsisString="" layoutX="458.0" layoutY="3.0" mnemonicParsing="false" onAction="#onButtonConfigClick" prefHeight="25.0" prefWidth="25.0" stylesheets="@../../../StyleSheets/StyleSheet.css" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212121" height="125.0" layoutX="12.0" layoutY="69.0" stroke="#212121" strokeType="INSIDE" width="576.0" />
+            <Button fx:id="disconnectButton" layoutX="34.0" layoutY="133.0" mnemonicParsing="false" onAction="#onDisconnectButtonClick" prefHeight="20.0" prefWidth="109.0" styleClass="defaultButton" stylesheets="@../../../StyleSheets/StyleSheet.css" text="Stop" textFill="#212121" />
+            <Button fx:id="ConnectButton" layoutX="34.0" layoutY="100.0" mnemonicParsing="false" onAction="#onConnectButtonClick" prefHeight="17.0" prefWidth="109.0" styleClass="defaultButton" stylesheets="@../../../StyleSheets/StyleSheet.css" text="Start" textFill="#212121" />
+            <ListView fx:id="listViewError" layoutX="154.0" layoutY="76.0" prefHeight="113.0" prefWidth="424.0" style="-fx-background-color: #424242;" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212121" height="167.0" layoutX="304.0" layoutY="-27.0" stroke="#212121" strokeType="INSIDE" width="282.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#424242" height="15.0" layoutX="310.0" layoutY="72.0" stroke="#424242" strokeType="INSIDE" width="271.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#424242" height="15.0" layoutX="310.0" layoutY="53.0" stroke="#424242" strokeType="INSIDE" width="271.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#424242" height="15.0" layoutX="310.0" layoutY="34.0" stroke="#424242" strokeType="INSIDE" width="271.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#424242" height="15.0" layoutX="310.0" layoutY="15.0" stroke="#424242" strokeType="INSIDE" width="271.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212121" height="167.0" layoutX="12.0" layoutY="-28.0" stroke="#212121" strokeType="INSIDE" width="282.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#424242" height="15.0" layoutX="18.0" layoutY="72.0" stroke="#424242" strokeType="INSIDE" width="271.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#424242" height="15.0" layoutX="18.0" layoutY="53.0" stroke="#424242" strokeType="INSIDE" width="271.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#424242" height="15.0" layoutX="18.0" layoutY="34.0" stroke="#424242" strokeType="INSIDE" width="271.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#424242" height="15.0" layoutX="18.0" layoutY="15.0" stroke="#424242" strokeType="INSIDE" width="271.0" />
+            <Label layoutX="321.0" layoutY="13.0" prefHeight="17.0" prefWidth="114.0" text="Modbus IP" textFill="#bdbdbd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="321.0" layoutY="33.0" prefHeight="17.0" prefWidth="114.0" text="Modbus Port" textFill="#bdbdbd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="13.0" prefHeight="17.0" prefWidth="114.0" text="Server url" textFill="#bdbdbd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="33.0" prefHeight="17.0" prefWidth="114.0" text="Date base name" textFill="#bdbdbd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="51.0" prefHeight="17.0" prefWidth="114.0" text="Username" textFill="#bdbdbd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="69.0" prefHeight="17.0" prefWidth="114.0" text="Password" textFill="#bdbdbd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Text fx:id="textModbusIP" fill="#bdbdbd" layoutX="411.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="192.192.192.192">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="textModbusPort" fill="#bdbdbd" layoutX="411.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="textServerUrl" fill="#bdbdbd" layoutX="144.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="textDateBaseName" fill="#bdbdbd" layoutX="144.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="textUsername" fill="#bdbdbd" layoutX="144.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="textPassword" fill="#bdbdbd" layoutX="144.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Label layoutX="321.0" layoutY="51.0" prefHeight="17.0" prefWidth="114.0" text="Data read" textFill="#bdbdbd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Text fx:id="textArrayLength" fill="#bdbdbd" layoutX="411.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Label layoutX="321.0" layoutY="69.0" prefHeight="17.0" prefWidth="114.0" text="Start address" textFill="#bdbdbd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Text fx:id="textStartingAddress" fill="#bdbdbd" layoutX="411.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#bdbdbd" layoutX="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SQL Server">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="#bdbdbd" layoutX="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modbus Connection">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,63 @@
+#configButton{
+    -fx-background-insets: 0,1,2,0;
+    -fx-background-color:#424242;
+    -fx-border-color:#000000;
+    -fx-background-image: url("@../../../UIControls/Config.png")
+}
+#configButton:hover{
+    -fx-border-color:#bdbdbd;
+}
+#configButton:pressed{
+    -fx-border-color:#E0E0E0;
+}
+#minimizeButton{
+    -fx-background-insets: 0,1,2,0;
+    -fx-background-color:#424242;
+    -fx-border-color:#000000;
+    -fx-background-image: url("@../../../UIControls/Minimize.png")
+}
+#minimizeButton:hover{
+    -fx-border-color:#bdbdbd;
+}
+#minimizeButton:pressed{
+    -fx-border-color:#E0E0E0;
+}
+#exitButton{
+    -fx-background-insets: 0,1,2,0;
+    -fx-background-color:#424242;
+    -fx-border-color:#000000;
+    -fx-background-image: url("@../../../UIControls/Exit.png")
+}
+#exitButton:hover{
+    -fx-border-color:#bdbdbd;
+}
+#exitButton:pressed{
+    -fx-border-color:#E0E0E0;
+}
+
+.defaultButton{
+    -fx-background-insets: 0,1,2,0;
+    -fx-background-color:#424242;
+    -fx-border-color:#000000;
+    -fx-text-fill:#bdbdbd;
+}
+.defaultButton:hover{
+    -fx-border-color:#bdbdbd;
+}
+.defaultButton:pressed{
+    -fx-border-color:#E0E0E0;
+}
+
+.tab-pane *.tab-header-area *.tab-header-background{
+    -fx-background-color:#424242;
+}
+.tab{
+    -fx-text-fill:#E0E0E0;
+    -fx-background-color:#424242;
+    -fx-border-color:#000000;
+}
+.tab:selected{
+    -fx-background-color:#bdbdbd;
+    -fx-text-fill:#424242;
+    -fx-font-weight:bold;
+}
